@@ -9,14 +9,14 @@ const turretHandler = require('handler.turrets');
 module.exports.loop = function () {
 
     //clear memory of dead creeps
-    memoryCleaner.run();
+    memoryCleaner();
 
     //turret defence / repair
-    turretHandler.run();
+    turretHandler();
 
     //automate spawning of creeps
-    spawnHandler.run();
+    spawnHandler();
 
     //iterate through all creeps
-    roleHandler.run();
+    roleHandler();
 }
